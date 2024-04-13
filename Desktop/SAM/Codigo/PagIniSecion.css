@@ -132,3 +132,54 @@
     background-color: grey;
   }
   
+  .notification-btn {
+    position: relative;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.notification-btn:hover {
+  background-color: #0056b3;
+}
+
+.notification-btn .icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img-prin/campana.png); /* Cambia 'path/to/your/icon.png' por la ruta de tu ícono */
+    background-size: cover;
+}
+
+.notification-btn .count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+.notifications {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: none;
+}
