@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+
+  header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #logo {
+    width: 70px;
+    border-radius: 5px;
+  }
+  
+
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li:first-child {
+    margin-left: 0;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    color: #ffc107;
+  }
+  
+  .boton-perfil {
+    width: 50px;
+    height: 50px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  .boton-perfil:hover {
+    background-color: #0056b3;
+  }
+  
+  footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+  
+  .login {
+    width: 400px;
+    overflow: hidden;
+    margin: 20px auto;
+    padding: 6cqh;
+    background-color: #fff;
+    border-radius: 15px;
+  }
+  
+  .login h2 {
+    text-align: center;
+    color: #277582;
+    padding: 18px;
+  }
+  
+  .login label {
+    color: #277582;
+    font-size: 17px;
+  }
+  
+  .login input[type="text"],
+  .login input[type="password"],
+  .login input[type="button"] {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    padding-left: 8px;
+  }
+  
+  .login input[type="button"] {
+    width: 300px;
+    height: 30px;
+    border: none;
+    border-radius: 17px;
+    padding-left: 7px;
+    color: blue;
+  }
+  
+  .login span {
+    color: #343a40;
+    font-size: 17px;
+  }
+  
+  .login a {
+    float: right;
+    background-color: grey;
+  }
+  
+  .notification-btn {
+    position: relative;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.notification-btn:hover {
+  background-color: #0056b3;
+}
+
+.notification-btn .icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(../img-prin/campana.png); /* Cambia 'path/to/your/icon.png' por la ruta de tu ícono */
+    background-size: cover;
+}
+
+.notification-btn .count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+.notifications {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 300px;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: none;
+}
