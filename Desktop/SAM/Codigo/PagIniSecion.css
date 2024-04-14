@@ -75,7 +75,7 @@
     background-color: #0056b3;
   }
   
-  footer {
+  /* footer {
     background-color: #343a40;
     color: #fff;
     text-align: center;
@@ -84,7 +84,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-  }
+  } */
   
   .login {
     width: 400px;
