@@ -6,58 +6,176 @@
     <title>SAM</title>
     <link rel="stylesheet" href="../styles/outputt.css">
     <link rel="shortcut icon" href="../img-prin/favicom.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
 </head>
 <body>
-    <header>
-    <nav class="navigation">
-		<ul class="menu-horizontal">
-			
-            <li><img class="logo" src="../img-prin/logo.png" alt=""></li>
-            <li><a href="#" class="active">Inicio</a></li>
-			<li><a href="#">Adopciones</a></li>
-            <li><a href="#">Donaciones</a></li>
-			<li>
-				<a href="#">Informes<i class="ri-arrow-down-s-line"></i></a>
-                
-				<ul class="menu-vertical">
-					<li><a href="#">Adoptadas</a></li>
-					<li><a href="#">Donadas</a></li>
-                    <li><a href="#">Favoritos</a></li>
-				</ul>
-			</li>
-			
-            <li><i class="ri-search-line nav_buscar" id="buscar_btn"></i></li>
-            <li><i class="ri-user-line nav_login" id="login_btn"></i></li>
-		</ul>
-	</nav>
+    <header class="flex flex-col ">
+        <nav class="bg-white py-6 relative mb-18 ">
+            <div class="container mx-auto items-center flex px-8 xl:p-0  ">
+                <div class="flex flex-grow">
+                    <a href=""><img class="w-24" src="../img-prin/logo.png" alt=""></a>
+                </div>
+                <div class="flex lg:hidden z-10 " >
+                    <li class=" group list-none">
+                        <svg class="h-8  text-black hover:text-amber-400 lg:text-black mr-7 cursor-pointer transition duration-500 ease-in-out lg:mb-0" onclick="openNot2();" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 18H19V11.0314C19 7.14806 15.866 4 12 4C8.13401 4 5 7.14806 5 11.0314V18ZM12 2C16.9706 2 21 6.04348 21 11.0314V20H3V11.0314C3 6.04348 7.02944 2 12 2ZM9.5 21H14.5C14.5 22.3807 13.3807 23.5 12 23.5C10.6193 23.5 9.5 22.3807 9.5 21Z"></path></svg> 
+                        <ul id="not2" class="hidden absolute top-20 bg-amber-400 left-0 w-full z-50">
+                            <h4 class="text-lg font-medium px-5 py-2">Notificaciones</h4>
+                            <li class="bg-amber-300 px-2">
+                                <div class="flex m-2">
+                                    <img class="w-32 rounded-md" src="../img-prin/persona1.webp" alt="">
+                                    <div class="text-left px-2">
+                                        <h5><strong>Laura Rojas </strong>acepto tu solicitud de adopcion.</h5>
+                                        <p class="text-sky-500">9h</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class=" bg-amber-300 px-2">
+                                <div class="flex m-2">
+                                    <img class="w-32 rounded-md" src="../img-prin/persona2.jpg" alt="">
+                                    <div class="text-left px-2">
+                                        <h5><strong>Alejandro Alvarez </strong>acepto tu solicitud de adopcion.</h5>
+                                        <p class="text-sky-500">13h</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                           
+                        
+                    </li>
+                    
+                    <svg class="h-8 text-black hover:text-amber-400 lg:text-black lg:mr-7 cursor-pointer transition duration-500 ease-in-out lg:mb-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" onclick="openMenu();"><path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path></svg> 
+                  
+                </div>
+                <div id="menu" class="lg:flex hidden flex-grow justify-between absolute lg:relative lg:top-0 top-20 bg-amber-400 lg:bg-white items-center left-0 w-full lg:w-auto py-14 lg:py-0 px-8 lg:px-0 z-50"> 
+                    
+                     <ul class="flex flex-col lg:flex-row text-center w-full">
+                        <li class="mb-8 lg:mb-0"><a href="#" class="text-black  lg:bg-amber-400 py-2.5 px-5 rounded-md  transition duration-500 ease-in-out hover:text-white font-medium text-lg lg:mr-7 font-sans ">Inicio</a></li>
+                       
+                        <li class="group mb-8 lg:mb-0">
+                            <a href="#" class="text-black lg:text-black  py-2.5 px-5 rounded-md lg:hover:bg-amber-400 transition duration-500 ease-in-out hover:text-white font-medium text-lg lg:mr-7 ">Mascotas<i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="lg:absolute  top-9 hidden group-hover:block px-1 rounded-md border border-amber-400 border-2">
+                                <li class="mb-2 mt-2 lg:mt-0 lg:mb-0"><a href="#" class="text-black lg:text-black px-10 rounded-md lg:hover:bg-amber-400 transition duration-500 ease-in-out hover:text-white  font-medium">Perros</a></li>
+                                <li class="mb-2  lg:mb-0"><a href="#" class="text-black justify-right lg:text-black px-10 rounded-md lg:hover:bg-amber-400 transition duration-500 ease-in-out hover:text-white font-medium">Gatos</a></li>
+                                
+                            </ul>
+                        </li>
+                        <li class="mb-8 lg:mb-0"><a href="#" class="text-black lg:text-black  py-2.5 px-5 rounded-md lg:hover:bg-amber-400 transition duration-500 ease-in-out hover:text-white font-medium text-lg lg:mr-7">Donaciones</a></li>
+                       
+                        <li class="group mb-8 lg:mb-0">
+                            <a href="#" class="text-black lg:text-black  py-2.5 px-5 rounded-md lg:hover:bg-amber-400 transition duration-500 ease-in-out hover:text-white font-medium text-lg lg:mr-7 ">Informes<i class="ri-arrow-down-s-line"></i></a>
+                            <ul class="lg:absolute  top-9 hidden group-hover:block px-0.5 rounded-md border border-amber-400 border-2 bg-white">
+                                <li class="mb-2 mt-2 lg:mt-0 lg:mb-0"><a href="#" class="text-black lg:text-black px-5 rounded-md lg:hover:bg-amber-400 transition duration-500 ease-in-out hover:text-white  font-medium">Adoptadas</a></li>
+                                <li class="mb-2  lg:mb-0"><a href="#" class="text-black justify-right lg:text-black px-7 rounded-md lg:hover:bg-amber-400 transition duration-500 ease-in-out hover:text-white font-medium">Donadas</a></li>
+                                <li><a href="#" class="text-black lg:text-black px-7 rounded-md lg:hover:bg-amber-400 transition duration-500 ease-in-out hover:text-white font-medium">Favoritos</a></li>
+                            </ul>
+                        </li>
+                     </ul>
+                    
+                    <div >
+                     <ul class="flex flex-col lg:flex-row mx-auto items-center"> 
+                        <div>
+                        
+                        <li  class="flex group hidden lg:block list-none lg:flex-row mx-auto">
+                            
+                            
+                            <svg class="h-8 mr-7 text-black hover:text-amber-400 lg:text-black  cursor-pointer transition duration-500 ease-in-out lg:mb-0"  onclick="openNot();" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M5 18H19V11.0314C19 7.14806 15.866 4 12 4C8.13401 4 5 7.14806 5 11.0314V18ZM12 2C16.9706 2 21 6.04348 21 11.0314V20H3V11.0314C3 6.04348 7.02944 2 12 2ZM9.5 21H14.5C14.5 22.3807 13.3807 23.5 12 23.5C10.6193 23.5 9.5 22.3807 9.5 21Z"></path></svg> 
+                            
+                            <ul id="not" class="absolute  bg-white  hidden  px-0.5 rounded-md border border-amber-400 border-2 right-1 w-96">
+                                <h4 class="text-lg font-medium px-5 py-2">Notificaciones</h4>
+                                <li class="mt-1 hoover:bg-amber-300">
+                                    <div class="flex m-2 hoover:bg-gray-300">
+                                        <img class="w-32 rounded-md" src="../img-prin/persona1.webp" alt="">
+                                        <div class="text-left px-2">
+                                            <h5><strong>Laura Rojas </strong>acepto tu solicitud de adopcion.</h5>
+                                            <p class="text-sky-500">9h</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="mt-1">
+                                    <div class="flex m-2">
+                                        <img class="w-32 rounded-md" src="../img-prin/persona2.jpg" alt="">
+                                        <div class="text-left px-2">
+                                            <h5><strong>Alejandro Alvarez </strong>acepto tu solicitud de adopcion.</h5>
+                                            <p class="text-sky-500">13h</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </div>
+                        
+                        <svg class="h-8  text-black hover:text-white lg:text-black lg:mr-7 cursor-pointer lg:hover:text-amber-400 transition duration-500 ease-in-out mb-8 lg:mb-0"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"></path></svg>
+                        <svg class="h-8  text-black hover:text-white lg:text-black cursor-pointer lg:hover:text-amber-400 transition duration-500 ease-in-out mb-8 lg:mb-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H18C18 18.6863 15.3137 16 12 16C8.68629 16 6 18.6863 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"></path></svg>
+                     </ul> 
+                    </div> 
+                </div>
+            </div>
+        </nav>
+        
     </header>
-    <div class="contenedor-externo">
-        <div class="interno1">
-            <img src="../img-prin/perro1.jpg" alt="" class="imagen">
-        </div>
-        <div class="interno2">
-            <h3>Descripcion</h3>
+    
+    <div class="md:flex lg:flex lg:px-5 mt-10 bg-amber-300 mx-10 rounded-md py-2">
+        
+            <img class="lg:w-56 md:w-56 rounded-md px-5 py-3 lg:px-0 lg:py:0 " src="../img-prin/perro1.jpeg" alt="" >
+        <div>
+            <h3 class="mx-10 px-5 font-bold">Descripcion</h3>
+        <div class="px-5  py-2 bg-white mx-5 lg:mx-10 rounded-md overflow-auto h-28">
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et eveniet consectetur labore atque maxime vitae quae dolor possimus voluptatibus. Assumenda ad enim iusto facere aliquam voluptatem similique praesentium! Doloribus, facere.</p>
         </div>
-        <div class="interno3">
-            <a href="#" class="input">Ver perfil</a>
-            <a href="#" class="input">Estado: <br>No disponible</a>
+        </div>
+        <div class="text-center p-5">
+            <div class="mb-5"><a href="#" class="bg-sky-500 px-2 rounded-md mb-8 font-bold hover:bg-sky-400 transition duration-500 ease-in-out py-2">Ver perfil</a></div>
+            <h5 class="font-bold">Estado</h5>
+            <h6 class="bg-red-500 px-2 rounded-md">No disponible</h6>
         </div>
     </div>
-    <div class="contenedor-externo">
-        <div class="interno1">
-            <img src="../img-prin/perro2.jpg" alt="" class="imagen">
-        </div>
-        <div class="interno2">
-            <h3>Descripcion</h3>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et eveniet consectetur labore atque maxime vitae quae dolor possimus voluptatibus. Assumenda ad enim iusto facere aliquam voluptatem similique praesentium! Doloribus, facere.</p>
-        </div>
-        <div class="interno3">
-            <a href="#" class="input">Ver perfil</a>
-            <a href="#" class="input">Estado: <br> Disponible</a>
-        </div>
+    <div class="md:flex lg:flex lg:px-5 mt-10 bg-amber-300 mx-10 rounded-md py-2">
+        
+        <img class="lg:w-56 md:w-56 rounded-md px-5 py-3 lg:px-0 lg:py:0 " src="../img-prin/gato1.png" alt="" >
+    <div>
+        <h3 class="mx-10 px-5 font-bold">Descripcion</h3>
+    <div class="px-5  py-2 bg-white mx-5 lg:mx-10 rounded-md overflow-auto h-28">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et eveniet consectetur labore atque maxime vitae quae dolor possimus voluptatibus. Assumenda ad enim iusto facere aliquam voluptatem similique praesentium! Doloribus, facere.</p>
     </div>
+    </div>
+    <div class="text-center p-5">
+        <div class="mb-5"><a href="#" class="bg-sky-500 px-2 rounded-md mb-8 font-bold hover:bg-sky-400 transition duration-500 ease-in-out py-2">Ver perfil</a></div>
+        <h5 class="font-bold">Estado</h5>
+        <h6 class="bg-green-500 px-2 rounded-md">Disponible</h6>
+    </div>
+</div>
+    
     <script src="PagInformes.js"></script>
+    <script>
+        
+  
+        function openMenu(){
+            let menu = document.getElementById('menu');
+            if(menu.classList.contains('hidden')){
+               menu.classList.remove('hidden');     
+            }else{
+                menu.classList.add('hidden')
+            }
+        }
+
+        function openNot(){
+            let menu = document.getElementById('not');
+            if(menu.classList.contains('hidden')){
+               menu.classList.remove('hidden');     
+            }else{
+                menu.classList.add('hidden')
+            }
+        }
+        function openNot2(){
+            let menu = document.getElementById('not2');
+            if(menu.classList.contains('hidden')){
+               menu.classList.remove('hidden');     
+            }else{
+                menu.classList.add('hidden')
+            }
+        }
+    </script>
 </body>
 </html>
