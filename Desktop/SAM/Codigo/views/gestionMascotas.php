@@ -8,7 +8,13 @@
 </head>
 <body>
         
-<header class=" flex flex-col bg-white m-0"></header>
+<header class="flex flex-col m-0 p-0 w-full  ">
+<?php
+        include_once __DIR__ . '/header.php';
+    ?>
+</header>
+ 
+
 <main>
     <div class="h-full bg-yellow-50 dark:bg-gray-900">
         <!-- Container -->
@@ -165,7 +171,6 @@
         </div>
     </footer>
 
-<script src="../js/index.js"></script>
 
 </body>
 </html>
