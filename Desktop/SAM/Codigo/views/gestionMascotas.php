@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../styles/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
         
@@ -67,15 +68,21 @@
                                     <p class="text-xs italic text-red-500">por favor, rellenar  campo.</p>
                                 </div>
                                 <div class="md:ml-2">
-                                    <label class="block mb-2 text-sm font-bold text-gray-700 dark:text-white" for="c_password">
-                                       Vacunas
-                                    </label>
-                                    <input
-                                        class="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 dark:text-white border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-                                        id="vacunas"
-                                        type="text"
-                                        placeholder="vacunas"
-                                    />
+                                    <p class="block mb-2 text-sm font-bold text-gray-700 dark:text-white">Vacuna</p>
+                                <div class="relative">
+    <label   class="cursor-pointer flex items-center gap-4 px-3  before:border-gray-400/60 hover:before:border-gray-300 group before:bg-gray-100 before:absolute before:inset-0 before:rounded-3xl before:border before:border-dashed before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95"> 
+      <div class="w-max relative">
+          <img class="w-10" src="https://www.svgrepo.com/show/485545/upload-cicle.svg" alt="" >
+      </div>
+      <div class="relative">
+          <span class="block text-base font-semibold relative text-black group-hover:text-amber-300 transition duration-150">
+              adjuntar carnet
+          </span>
+      </div>
+      <input hidden="" type="image"  id="Vacunas">
+     </label>
+</div>
+                                    
                                 </div>
                             </div>
                             <div class="mb-4 md:flex md:justify-between">
