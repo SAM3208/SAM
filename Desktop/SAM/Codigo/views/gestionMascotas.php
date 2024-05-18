@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="../styles/output.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    
 </head>
 
 <body>
@@ -69,7 +70,7 @@
                                         <p class="block mb-2 text-sm font-bold text-gray-700 dark:text-white">Vacuna</p>
                                         <div class="relative">
                                             <label
-                                                class="cursor-pointer flex items-center gap-4 px-3  before:border-gray-400/60 hover:before:border-gray-300 group before:bg-gray-100 before:absolute before:inset-0 before:rounded-3xl before:border before:border-dashed before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95">
+                                                class="cursor-pointer flex items-center gap-3 px-3  before:border-gray-400/60 hover:before:border-gray-300 group before:bg-gray-100 before:absolute before:inset-0 before:rounded-3xl before:border before:border-dashed before:transition-transform before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95">
                                                 <div class="w-max relative">
                                                     <img class="w-10"
                                                         src="https://www.svgrepo.com/show/485545/upload-cicle.svg"
@@ -77,7 +78,7 @@
                                                 </div>
                                                 <div class="relative">
                                                     <span
-                                                        class="block text-base font-semibold relative text-black group-hover:text-amber-300 transition duration-150">
+                                                        class="block text-base font-semibold relative text-gray-300 group-hover:text-amber-300 transition duration-150">
                                                         adjuntar carnet
                                                     </span>
                                                 </div>
@@ -118,7 +119,7 @@
                                         id="descripcion" type="text" placeholder="jugueton, ciudad, condiciones etc..." />
                                 </div>
                                 <div class="flex items-center justify-center w-full">
-                                    <label for="dropzone-file"
+                                    <label 
                                         class="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
                                         <div class="flex flex-col items-center justify-center pt-5 pb-6">
                                             <svg class="w-8 h-8 mb-4 text-gray-500 dark:text-gray-400"
@@ -133,7 +134,7 @@
                                             </p>
                                             <p class="text-xs text-gray-500 dark:text-gray-400"> PNG, JPG </p>
                                         </div>
-                                        <input id="dropzone-file" type="file" class="hidden" />
+                                        <input id="imagenMascota" type="image" class="hidden" />
                                     </label>
                                 </div>
 
