@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial Peticiones</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="shortcut icon" href="../img-prin/favicom.png" type="image/x-icon">
+
+</head>
+<body class="bg-gray-100">
+  <header class="flex flex-col">
+    <nav class="bg-white py-6 relative mb-18">
+      <div class="container mx-auto items-center flex px-8 xl:p-0">
+        <div class="flex flex-grow">
+          <a href=""
+            ><img class="w-24" src="../../img-prin/logo.png" alt=""
+          /></a>
+        </div>
+        <div class="flex lg:hidden z-10">
+          <li class="group list-none">
+            <svg
+              class="h-8 text-black hover:text-amber-400 lg:text-black mr-7 cursor-pointer transition duration-500 ease-in-out lg:mb-0"
+              onclick="openNot2();"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M5 18H19V11.0314C19 7.14806 15.866 4 12 4C8.13401 4 5 7.14806 5 11.0314V18ZM12 2C16.9706 2 21 6.04348 21 11.0314V20H3V11.0314C3 6.04348 7.02944 2 12 2ZM9.5 21H14.5C14.5 22.3807 13.3807 23.5 12 23.5C10.6193 23.5 9.5 22.3807 9.5 21Z"
+              ></path>
+            </svg>
+            <ul
+              id="not2"
+              class="hidden absolute top-20 bg-amber-400 left-0 w-full z-50"
+            >
+              <h4 class="text-lg font-medium px-5 py-2">Notificaciones</h4>
+              <li class="bg-amber-300 px-2">
+                <div class="flex m-2">
+                  <img
+                    class="w-32 rounded-md"
+                    src="../img-prin/persona1.webp"
+                    alt=""
+                  />
+                  <div class="text-left px-2">
+                    <h5>
+                      <strong>Laura Rojas </strong>acepto tu solicitud de
+                      adopcion.
+                    </h5>
+                    <p class="text-sky-500">9h</p>
+                  </div>
+                </div>
+              </li>
+              <li class="bg-amber-300 px-2">
+                <div class="flex m-2">
+                  <img
+                    class="w-32 rounded-md"
+                    src="../img-prin/persona2.jpg"
+                    alt=""
+                  />
+                  <div class="text-left px-2">
+                    <h5>
+                      <strong>Alejandro Alvarez </strong>acepto tu solicitud
+                      de adopcion.
+                    </h5>
+                    <p class="text-sky-500">13h</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+          <svg
+            class="h-8 text-black hover:text-amber-400 lg:text-black lg:mr-7 cursor-pointer transition duration-500 ease-in-out lg:mb-0"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            onclick="openMenu();"
+          >
+            <path d="M3 4H21V6H3V4ZM3 11H21V13H3V11ZM3 18H21V20H3V18Z"></path>
+          </svg>
+        </div>
+        <div
+          id="menu"
+          class="lg:flex hidden flex-grow justify-between absolute lg:relative lg:top-0 top-20 bg-amber-400 lg:bg-white items-center left-0 w-full lg:w-auto py-14 lg:py-0 px-8 lg:px-0 z-50"
+        >
+          <ul class="flex flex-col lg:flex-row text-center w-full">
+            <li class="mb-8 lg:mb-0">
+              <a
+                href="#"
+                class="text-black lg:bg-amber-400 py-2.5 px-5 rounded-md transition duration-500 ease-in-out hover:text-white font-medium text-lg lg:mr-7 font-sans"
+                >Inicio</a
+              >
+            </li>
+
+            <li class="group mb-8 lg:mb-0">
+              <a
+                href="#"
+                class="text-black lg:text-black py-2.5 px-5 rounded-md lg:hover:bg-amber-400 transition duration-500 ease-in-out hover:text-white font-medium text-lg lg:mr-7"
+                >Mascotas<i class="ri-arrow-down-s-line"></i
+              ></a>
+              <ul
+                class="lg:absolute top-9 hidden group-hover:block px-1 rounded-md border border-amber-400 border-2"
+              >
+                <li class="mb-2 mt-2 lg:mt-0 lg:mb-0">
+                  <a
+                    href="#"
+                    class="text-black lg:text-black px-10 rounded-md lg:hover:bg-amber-400 transition duration-500 ease-in-out hover:text-white font-medium"
+                    >Perros</a
+                  >
+                </li>
+                <li class="mb-2 lg:mb-0">
+                  <a
+                    href="#"
+                    class="text-black justify-right lg:text-black px-10 rounded-md lg:hover:bg-amber-400 transition duration-500 ease-in-out hover:text-white font-medium"
+                    >Gatos</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="mb-8 lg:mb-0">
+              <a
+                href="#"
+                class="text-black lg:text-black py-2.5 px-5 rounded-md lg:hover:bg-amber-400 transition duration-500 ease-in-out hover:text-white font-medium text-lg lg:mr-7"
+                >Donaciones</a
+              >
+            </li>
+
+            <li class="group mb-8 lg:mb-0">
+              <a
+                href="#"
+                class="text-black lg:text-black py-2.5 px-5 rounded-md lg:hover:bg-amber-400 transition duration-500 ease-in-out hover:text-white font-medium text-lg lg:mr-7"
+                >Informes<i class="ri-arrow-down-s-line"></i
+              ></a>
+              <ul
+                class="lg:absolute top-9 hidden group-hover:block px-0.5 rounded-md border border-amber-400 border-2 bg-white"
+              >
+                <li class="mb-2 mt-2 lg:mt-0 lg:mb-0">
+                  <a
+                    href="#"
+                    class="text-black lg:text-black px-5 rounded-md lg:hover:bg-amber-400 transition duration-500 ease-in-out hover:text-white font-medium"
+                    >Adoptadas</a
+                  >
+                </li>
+                <li class="mb-2 lg:mb-0">
+                  <a
+                    href="#"
+                    class="text-black justify-right lg:text-black px-7 rounded-md lg:hover:bg-amber-400 transition duration-500 ease-in-out hover:text-white font-medium"
+                    >Donadas</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="text-black lg:text-black px-7 rounded-md lg:hover:bg-amber-400 transition duration-500 ease-in-out hover:text-white font-medium"
+                    >Favoritos</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div>
+            <ul class="flex flex-col lg:flex-row mx-auto items-center">
+              <div>
+                <li
+                  class="flex group hidden lg:block list-none lg:flex-row mx-auto"
+                >
+                  <svg
+                    class="h-8 mr-7 text-black hover:text-amber-400 lg:text-black cursor-pointer transition duration-500 ease-in-out lg:mb-0"
+                    onclick="openNot();"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                  >
+                    <path
+                      d="M5 18H19V11.0314C19 7.14806 15.866 4 12 4C8.13401 4 5 7.14806 5 11.0314V18ZM12 2C16.9706 2 21 6.04348 21 11.0314V20H3V11.0314C3 6.04348 7.02944 2 12 2ZM9.5 21H14.5C14.5 22.3807 13.3807 23.5 12 23.5C10.6193 23.5 9.5 22.3807 9.5 21Z"
+                    ></path>
+                  </svg>
+
+                  <ul
+                    id="not"
+                    class="absolute bg-white hidden px-0.5 rounded-md border border-amber-400 border-2 right-1 w-96"
+                  >
+                    <h4 class="text-lg font-medium px-5 py-2">
+                      Notificaciones
+                    </h4>
+                    <li class="mt-1 hoover:bg-amber-300">
+                      <div class="flex m-2 hoover:bg-gray-300">
+                        <img
+                          class="w-32 rounded-md"
+                          src="../img-prin/retrato-hermoso-mujer-joven-posicion-pared-gris_231208-10760.avif"
+                          alt=""
+                        />
+                        <div class="text-left px-2">
+                          <h5>
+                            <strong>Laura Rojas </strong>acepto tu solicitud
+                            de adopcion.
+                          </h5>
+                          <p class="text-sky-500">9h</p>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="mt-1">
+                      <div class="flex m-2">
+                        <img
+                          class="w-32 rounded-md"
+                          src="../img-prin/Hero_Mobile_Cuenta_Personas_V1_1_8046e424ea.webp "
+                          alt=""
+                        />
+                        <div class="text-left px-2">
+                          <h5>
+                            <strong>Alejandro Alvarez </strong>acepto tu
+                            solicitud de adopcion.
+                          </h5>
+                          <p class="text-sky-500">13h</p>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+              </div>
+
+              <svg
+                class="h-8 text-black hover:text-white lg:text-black lg:mr-7 cursor-pointer lg:hover:text-amber-400 transition duration-500 ease-in-out mb-8 lg:mb-0"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748Z"
+                ></path>
+              </svg>
+              <svg
+                class="h-8 text-black hover:text-white lg:text-black cursor-pointer lg:hover:text-amber-400 transition duration-500 ease-in-out mb-8 lg:mb-0"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M4 22C4 17.5817 7.58172 14 12 14C16.4183 14 20 17.5817 20 22H18C18 18.6863 15.3137 16 12 16C8.68629 16 6 18.6863 6 22H4ZM12 13C8.685 13 6 10.315 6 7C6 3.685 8.685 1 12 1C15.315 1 18 3.685 18 7C18 10.315 15.315 13 12 13ZM12 11C14.21 11 16 9.21 16 7C16 4.79 14.21 3 12 3C9.79 3 8 4.79 8 7C8 9.21 9.79 11 12 11Z"
+                ></path>
+              </svg>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="py-8 px-4 sm:px-8">
+    <h1 class="text-2xl sm:text-3xl font-bold mb-8 text-center">Historial Adopciones</h1>
+    
+    <div class="flex flex-col sm:flex-row mb-4 space-y-4 sm:space-y-0 sm:space-x-4">
+        <button class="bg-amber-400 text-white py-2 px-4 rounded border hover:bg-amber-500 w-full sm:w-auto">Historial De Solicitudes</button>
+        <button class="bg-amber-400 text-white py-2 px-4 rounded border hover:bg-amber-500 w-full sm:w-auto">Historial De Peticiones</button>
+    </div>
+    
+    <div class="space-y-4">
+
+        <!-- Mascota 1 -->
+        <div class="bg-white p-4 rounded shadow-md">
+            <div class="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-4 space-y-4 sm:space-y-0">
+                <div class="w-32 h-32 sm:w-40 sm:h-40 bg-gray-300 rounded-full overflow-hidden">
+                    <img src="../img-prin/PerroP.jpg" alt="Imagen de Firulais" class="w-full h-full object-cover" />
+                </div>
+                <div class="flex flex-col text-center sm:text-left">
+                    <h2 class="text-xl sm:text-2xl font-bold mb-2">Firulais</h2>
+                    <p><span class="font-semibold">Edad:</span> 2</p>
+                    <p><span class="font-semibold">Tamaño:</span> Grande</p>
+                    <p><span class="font-semibold">Raza:</span> Siames</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row mt-4 space-y-4 sm:space-y-0 sm:space-x-4">
+                <!-- Donante -->
+                <div class="bg-white p-4 rounded border-2 border-gray-200 w-full sm:w-1/2">
+                    <h2 class="text-xl font-bold mb-4">Donante</h2>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="../img-prin/perfi-3.jpeg" alt="Perfil donante" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <p><span class="font-semibold">Nombre:</span> En revisión</p>
+                            <p><span class="font-semibold">Apellido:</span> En revisión</p>
+                            <p><span class="font-semibold">Documento:</span> En revisión</p>
+                            <p><span class="font-semibold">Dirección:</span> En revisión</p>
+                            <p><span class="font-semibold">Correo:</span> En revisión</p>
+                            <p><span class="font-semibold">Teléfono:</span> En revisión</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adoptador -->
+                <div class="bg-white p-4 rounded border-2 border-gray-200 w-full sm:w-1/2">
+                    <h2 class="text-xl font-bold mb-4">Adoptante</h2>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="../img-prin/Usuario1.jpg" alt="Perfil adoptante" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <p><span class="font-semibold">Nombre:</span> En revisión</p>
+                            <p><span class="font-semibold">Apellido:</span> En revisión</p>
+                            <p><span class="font-semibold">Documento:</span> En revisión</p>
+                            <p><span class="font-semibold">Dirección:</span> En revisión</p>
+                            <p><span class="font-semibold">Correo:</span> En revisión</p>
+                            <p><span class="font-semibold">Teléfono:</span> En revisión</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mascota 2 -->
+        <div class="bg-white p-4 rounded shadow-md">
+            <div class="flex flex-col sm:flex-row items-center space-x-0 sm:space-x-4 space-y-4 sm:space-y-0">
+                <div class="w-32 h-32 sm:w-40 sm:h-40 bg-gray-300 rounded-full overflow-hidden">
+                    <img src="../img-prin/gato2.png" alt="Imagen de Michi" class="w-full h-full object-cover" />
+                </div>
+                <div class="flex flex-col text-center sm:text-left">
+                    <h2 class="text-xl sm:text-2xl font-bold mb-2">Michi</h2>
+                    <p><span class="font-semibold">Edad:</span> 999</p>
+                    <p><span class="font-semibold">Tamaño:</span> Medio</p>
+                    <p><span class="font-semibold">Raza:</span> Peludo</p>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row mt-4 space-y-4 sm:space-y-0 sm:space-x-4">
+                <!-- Donante -->
+                <div class="bg-white p-4 rounded border-2 border-gray-200 w-full sm:w-1/2">
+                    <h2 class="text-xl font-bold mb-4">Donante</h2>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="../img-prin/Usuario1.jpg" alt="Perfil donante" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <p><span class="font-semibold">Nombre:</span> En revisión</p>
+                            <p><span class="font-semibold">Apellido:</span> En revisión</p>
+                            <p><span class="font-semibold">Documento:</span> En revisión</p>
+                            <p><span class="font-semibold">Dirección:</span> En revisión</p>
+                            <p><span class="font-semibold">Correo:</span> En revisión</p>
+                            <p><span class="font-semibold">Teléfono:</span> En revisión</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adoptador -->
+                <div class="bg-white p-4 rounded border-2 border-gray-200 w-full sm:w-1/2">
+                    <h2 class="text-xl font-bold mb-4">Adoptante</h2>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-16 h-16 sm:w-20 sm:h-20 bg-gray-300 rounded-full overflow-hidden flex-shrink-0">
+                            <img src="../img-prin/perfi-3.jpeg" alt="Perfil adoptante" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <p><span class="font-semibold">Nombre:</span> En revisión</p>
+                            <p><span class="font-semibold">Apellido:</span> En revisión</p>
+                            <p><span class="font-semibold">Documento:</span> En revisión</p>
+                            <p><span class="font-semibold">Dirección:</span> En revisión</p>
+                            <p><span class="font-semibold">Correo:</span> En revisión</p>
+                            <p><span class="font-semibold">Teléfono:</span> En revisión</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+    <footer class="bg-amber-400  px-8 lg:px-20 py-3.5 lg:h-14 flex items-center justify-center gap-10">
+      <div>
+      <h2 class="lg:font-bold text-xs lg:text-base  text-black">© 2024 SAM. Todos los derechos reservados.</h2>
+      </div>
+      <div class="flex gap-2 text-black">
+          <i class="ri-youtube-fill  text-3xl"></i>
+          <i class="ri-instagram-fill  text-3xl"></i>
+          <i class="ri-facebook-fill text-3xl"></i>
+          <i class="ri-twitter-x-line  text-3xl"></i>
+      </div>
+    </footer>
+    
+
+</body>
+</html>
